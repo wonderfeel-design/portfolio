@@ -44,11 +44,8 @@
           <span>EN · ES · RU</span>
         </div>
       </div>
-      <div class="portrait-frame">
-        <div class="tape">portrait.jpg</div>
-        <image-slot id="headshot" class="portrait" shape="rounded" radius="4"
-          placeholder="Drop your headshot"></image-slot>
-      </div>
+      <image-slot id="headshot" class="portrait" shape="rounded" radius="4" style="width: 481px; height: 593px"
+        placeholder=""></image-slot>
     </div>
   </div>
 </header>
@@ -185,11 +182,11 @@
         `<div><div class="cm-v">${m.value}</div><div class="cm-l">${m.label}</div></div>`).join("");
       const tags = c.tags.slice(0, 3).map(t => `<span class="case-tag">${t}</span>`).join("");
       card.innerHTML =
-        `<div class="case-thumb">
+        `<div class="case-thumb"${c.cover ? ` style="background: url(&quot;${c.cover}&quot;) center / cover no-repeat"` : ""}>
            <span class="case-badge">${cat.label}</span>
            <span class="case-disc">↗</span>
-           <image-slot id="thumb-${c.id}" shape="rounded" radius="30"
-             placeholder="${c.client} — cover image"></image-slot>
+           ${c.noThumb ? "" : `<image-slot id="thumb-${c.id}" shape="rounded" radius="30"${c.slotCover ? ` style="background: url(&quot;${c.slotCover}&quot;) center / cover no-repeat"` : ""}
+             placeholder=""></image-slot>`}
          </div>
          <div class="case-body">
            <div class="case-top"><span class="case-client">${c.client}</span><span class="sep">•</span><span>${c.year}</span></div>
