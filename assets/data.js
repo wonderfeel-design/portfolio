@@ -64,8 +64,10 @@ window.KA = {
     /* ───────────────────────── FINTECH ───────────────────────── */
     {
       id: "retail-bank-usability",
+      noThumb: true,
+      cover: "./assets/images/bks-mtq051ti-wet9.png",
       category: "fintech",
-      client: "BKS Bank",
+      client: "Retail Bank (EE, under NDA)",
       clientNote: "Major retail bank",
       title: "Rebuilding trust in a redesigned banking app",
       summary: "A full-app usability study \u2014 14 scenarios, 30 people, 11 cities \u2014 that replaced internal assumptions with a severity-ranked, sprint-ready backlog.",
@@ -93,11 +95,13 @@ window.KA = {
       ],
       shots: [
         { id: "bank-matrix", cap: "30 \u00d7 14 success / failure matrix" },
-        { id: "bank-severity", cap: "Severity-ranked issue log" }
+        { id: "bank-severity", cap: "Severity-ranked issue log", w: 492, h: 286 }
       ]
     },
     {
       id: "crypto-pmf",
+      noThumb: true,
+      cover: "./assets/images/keyapp-mtq05nr7-an4s.png",
       category: "fintech",
       client: "KeyApp",
       clientNote: "Solana-based crypto app",
@@ -145,6 +149,8 @@ window.KA = {
     },
     {
       id: "b2b-insurance",
+      noThumb: true,
+      cover: "./assets/images/mains_03-mv52ogkh-lkza.png",
       category: "fintech",
       client: "Mains Group",
       clientNote: "Insurance broker group",
@@ -166,6 +172,16 @@ window.KA = {
         action: "Ran 20 JTBD interviews with HR professionals from 15 companies (4 SMB + 10 large corp + 6 employees). Tested four hypotheses, produced a 7-stage CJM, and mapped barriers and drivers per hypothesis per segment.",
         result: "H1 (DMS to HR): confirmed 7/13 \u2014 opaque handling and phone dependency as barriers. H2 (enrolment time): mixed \u2014 EDO simplifies, regional insurer incompetence is the real barrier. H3 (changing insurer): confirmed 3/13 \u2014 brokers ease tenders, SMBs distrust them. H4 (HR controls complaints): not confirmed by 10/13 \u2014 employees contact insurers directly. Delivered a 7-stage CJM and two TA portraits as strategic input."
       },
+      outcome: {
+        title: "From research to a top-10 insurtech solution",
+        paras: [
+          "The research explained why health insurance products had struggled in the region. It identified two audience segments, each with its own pain points and latent needs, and gave Mains Group an evidence base for product decisions.",
+          "Mains Group used the findings to launch an online platform. One section works as a health-insurance aggregator where clients configure their coverage in real time.",
+          "One of the platform\u2019s solutions placed in the top 10 of 320 startups from 42 countries at MENA InsureTech Rising 2023 in Qatar. The team is now running a pilot with leading Qatari insurers."
+        ],
+        storyText: "Read a full success story here.",
+        storyUrl: ""
+      },
       artifacts: [
         "4 hypothesis-validation reports with barriers/drivers and quotes",
         "7-stage B2B customer journey map (needs \u2192 employee training)",
@@ -173,31 +189,33 @@ window.KA = {
         "Strategic product recommendations grounded in confirmed pain points"
       ],
       shots: [
-        { id: "ins-cjm", cap: "7-stage B2B journey map" },
-        { id: "ins-portraits", cap: "SMB vs. large-corp TA portraits" }
+        { id: "ins-cjm", cap: "7-stage B2B journey map", w: 458, h: 246 },
+        { id: "ins-portraits", cap: "SMB vs. large-corp TA portraits", bg: "./assets/images/mains_01-mv52mzhx-f6hk.png", bgSize: "auto", w: 463, h: 225 }
       ]
     },
     {
       id: "mena-segmentation",
+      noThumb: true,
+      cover: "./assets/images/cfi-mtq08y5e-s6d4.png",
       category: "fintech",
       client: "CFI",
       clientNote: "Global trading platform, 35 countries",
-      title: "Segmenting four MENA markets, qual meets 3B transactions",
-      summary: "25 Arabic interviews and 3B+ transactions combined into four trader portraits and two regional strategy clusters \u2014 the backbone of CFI's new MENA marketing plan.",
+      title: "Segmenting four MENA markets",
+      summary: "25 Arabic interviews combined into four trader portraits and two regional strategy clusters \u2014 the backbone of CFI's new MENA marketing plan.",
       tags: ["Market research", "Segmentation", "CJM", "Quant + qual", "4 markets"],
-      method: "25 Arabic interviews + ABCDX segmentation + CJM as-is/to-be + transaction analysis (BigQuery / SQL / Python)",
+      method: "25 Arabic interviews + segmentation + CJM as-is/to-be",
       sample: "Lebanon, Jordan, Egypt, Kuwait \u00b7 8 weeks",
       year: "Trading \u00b7 MENA market research",
       metrics: [
         { value: "25", label: "in-depth Arabic interviews" },
-        { value: "3B+", label: "transactions analysed" },
+        { value: "4", label: "MENA markets" },
         { value: "4", label: "MENA markets" },
         { value: "100+", label: "validated insights" }
       ],
       star: {
         situation: "CFI needed to know what to prioritise in its messaging across four MENA markets. Some approaches drove awareness, but the team didn't know why they worked, or which product dimension to lead with per market \u2014 so spend was undifferentiated.",
         task: "Lead market research across Lebanon, Jordan, Egypt and Kuwait: build trader segment portraits, identify MENA-specific behaviours, map conservative vs. exploratory clusters, and produce actionable recommendations from 100+ insights.",
-        action: "Ran 25 in-depth Arabic interviews across the four markets and applied the ABCDX framework to map four profiles, from Beginners to Experts. Mapped the full journey (contemplation \u2192 education \u2192 community \u2192 active trading \u2192 decision) and ran quantitative analysis of 3B+ transactions via BigQuery, GA, SQL and Python. Built CJM as-is and to-be.",
+        action: "Ran 25 in-depth Arabic interviews across the four markets and applied the ABCDX framework to map four profiles, from Beginners to Experts. Mapped the full journey (contemplation \u2192 education \u2192 community \u2192 active trading \u2192 decision). Built CJM as-is and to-be.",
         result: "Delivered four trader portraits and two regional clusters \u2014 Lebanon + Egypt (conservative) and Jordan + Kuwait (exploratory). Pan-MENA insight: the primary motivation is financial enrichment, not speculation, with shared focus on Oil, Gold and major Forex. 100+ insights underpinned CFI's new regional marketing plan, revised comms strategy and UX improvements; an AI trading assistant was recommended as a research-validated initiative."
       },
       artifacts: [
@@ -214,6 +232,8 @@ window.KA = {
     },
     {
       id: "ajtbd-payments",
+      noThumb: true,
+      cover: "./assets/images/paymentapp-1-mv19tzms-auzn.png",
       category: "fintech",
       client: "B2B Payments Platform",
       clientNote: "Regulated high-risk industries",
@@ -245,15 +265,17 @@ window.KA = {
       ],
       shots: [
         { id: "ajtbd-graph", cap: "AJTBD 4-role job graph" },
-        { id: "ajtbd-roadmap", cap: "3-phase roadmap with targets" }
+        { id: "ajtbd-roadmap", cap: "Cross-role jobs analysis" }
       ]
     },
 
     /* ─────────────────── SOCIAL DISCOVERY & CREATOR ─────────────────── */
     {
       id: "creator-2market",
+      noThumb: true,
+      cover: "./assets/images/bloggerapp_05-mv59wpow-lmho.png",
       category: "social",
-      client: "Funcorp",
+      client: "Creator app",
       clientNote: "Creator-tools company",
       title: "Should we build a coaching app? Two markets answer",
       summary: "Two sequential JTBD flights in Mexico and the US tested 29 hypotheses and mapped five creator segments \u2014 validating a coaching app for advanced creators, and a freemium pivot for everyone else.",
@@ -282,14 +304,15 @@ window.KA = {
         "Market comparison brief: MX vs. US monetisation readiness"
       ],
       shots: [
-        { id: "creator-segments", cap: "Segment portraits \u2014 MX 3 segments" },
-        { id: "creator-scorecard", cap: "Hypothesis scorecard \u2014 US flight" }
+        { id: "creator-segments", cap: "Segment portraits \u2014 MX 3 segments", w: 468, h: 244 },
+        { id: "creator-scorecard", cap: "Creator CJM\u2014 MX flight", w: 467, h: 252 }
       ]
     },
     {
       id: "dexart-web3",
       category: "social",
       client: "DexArt",
+      link: "https://dexart.com/en",
       clientNote: "Web3 metaverse ecosystem",
       title: "Making virtual real estate make sense to business owners",
       summary: "Competitive benchmarking and business-owner interviews informed two from-scratch flows \u2014 a Metaverse Map and an Avatar Room \u2014 that lowered the Web3 entry barrier for non-crypto-native users.",
@@ -361,8 +384,10 @@ window.KA = {
     },
     {
       id: "ai-trading-agent",
+      noThumb: true,
+      cover: "./assets/images/tradingplatf_01-mv59qqwt-7qxv.png",
       category: "emerging",
-      client: "Garage IT",
+      client: "Trading Platform",
       clientNote: "Fintech trading platform",
       title: "Designing trust into an AI trading agent",
       summary: "Mental-model interviews and lo-fi concept testing defined how much automation traders will trust \u2014 and the explanation format an AI order-analysis agent needed \u2014 before development began.",
@@ -388,8 +413,44 @@ window.KA = {
         "Requirements document aligning product and engineering on MVP scope"
       ],
       shots: [
-        { id: "agent-mental", cap: "Trader mental-model map" },
-        { id: "agent-output", cap: "AI output-format guidelines" }
+        { id: "agent-mental", cap: "Trader mental-model map", bg: "./assets/images/garage-agent-map-w.png", w: 443, h: 292 },
+        { id: "agent-output", cap: "AI output-format guidelines", bg: "./assets/images/garage-agent-output-w.png", w: 470, h: 280 }
+      ]
+    },
+    {
+      id: "smartdialog-saas",
+      category: "emerging",
+      client: "Smart Dialog",
+      clientNote: "AI conversation-analytics SaaS \u00b7 Leads Lab",
+      title: "AI SaaS that hears what sales calls miss",
+      summary: "As product manager and researcher I shaped Smart Dialog \u2014 an AI SaaS that turns the \u201cblack box\u201d of phone sales into objection clusters, an emotional dialogue profile and a lead-reactivation index, then proved +42% recoverable leads on a live ad campaign.",
+      tags: ["Product management", "AI / NLP", "Market & competitor research", "Objection clustering", "Lead reactivation"],
+      method: "Product definition + market & competitor analysis + objection-cluster analysis of live call data + client pilot",
+      sample: "Autodealer ad campaign (782 calls) \u00b7 REFFECTION call-centre pilot",
+      year: "Conversational AI \u00b7 SaaS for sales",
+      metrics: [
+        { value: "+42%", label: "recoverable leads identified" },
+        { value: "3\u00d7", label: "faster lead processing (pilot)" },
+        { value: "185K+", label: "dialogues / month analysed" },
+        { value: "11", label: "objection clusters mapped" }
+      ],
+      star: {
+        situation: "Sales-call quality is a black box: companies lose up to 98% of potential clients on the phone, dialogues are scored subjectively by the agent who ran them, only successful calls reach the CRM, and just ~3% are ever reviewed by quality control. Rival tools surfaced problems but handed back raw data, leaving the customer\u2019s own specialists to interpret it.",
+        task: "As product manager and researcher, define a SaaS platform that uses AI to analyse recorded dialogues and output ready-to-use decisions directly into the customer\u2019s business processes \u2014 no data-science team required \u2014 and prove the commercial value before scaling.",
+        action: "Owned the product definition end to end: shaped the value proposition, multimodal analysis approach (transcription \u2192 diarisation \u2192 a dynamic emotional dialogue profile, \u201cSERER\u201d, plus an operator-fatigue index) and the dashboard. Ran the competitor landscape against domestic and foreign speech-analytics players, sized the market (TAM/SAM/SOM), and led objection-cluster analysis on a real autodealer ad campaign in St. Petersburg \u2014 coding 1,638 objections across 11 clusters and reconciling results against the client\u2019s CRM.",
+        result: "On 782 campaign calls, 634 (81%) showed no initial interest \u2014 yet 41.5% of objections were judged workable, and the reactivation index flagged 62 of them as recoverable hot leads at a 10% conversion rate: +42% on top of the leads won in first contact. In the REFFECTION call-centre pilot (185,000+ successful dialogues a month) the platform cut lead-handling time 3\u00d7, doubled qualified leads, lifted the reactivation index to 5%, reduced production costs 20% and saved the company ~1M\u20bd a month \u2014 validating an AI-first, decision-ready positioning over raw-data competitors."
+      },
+      artifacts: [
+        "Product definition & value proposition: AI dialogue analysis \u2192 decision-ready output",
+        "Competitor matrix: domestic & foreign speech-analytics tools vs. Smart Dialog capabilities",
+        "Market sizing model \u2014 TAM / SAM / SOM for conversational AI",
+        "11-cluster objection taxonomy with reactivation-index methodology",
+        "Live-campaign analysis: 782-call breakdown + CRM reconciliation",
+        "REFFECTION pilot results deck: time, leads, cost and reactivation impact"
+      ],
+      shots: [
+        { id: "sd-clusters", cap: "11 objection clusters \u00d7 call status" },
+        { id: "sd-reactivation", cap: "Lead-reactivation index \u2014 +42% recoverable" }
       ]
     }
   ]
