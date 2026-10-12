@@ -83,7 +83,7 @@
   }
 
   const shots = c.shots.map(s =>
-    `<div><image-slot id="shot-${s.id}" shape="rounded" radius="4"
+    `<div><image-slot id="shot-${s.id}" shape="rounded" radius="4"${s.w || s.h || s.bg ? ` style="${s.h ? `height: ${s.h}px; ` : ""}${s.w ? `width: ${s.w}px; ` : ""}${s.bg ? `background: url(&quot;${s.bg}&quot;) center / ${s.bgSize || "cover"} no-repeat` : ""}"` : ""}
         placeholder="Drop: ${s.cap}"></image-slot>
      <span class="shot-cap">${s.cap}</span></div>`).join("");
 
@@ -99,6 +99,7 @@
         <div class="detail-cat"><span class="case-cat" style="--cat:${col}; color:${col};">${cat.label}</span></div>
         <h1><span class="client">${c.client}.</span> ${c.title}</h1>
         <p class="detail-lede">${c.summary}</p>
+        ${c.link ? `<a class="live-link" href="${c.link}" target="_blank" rel="noopener">View live project \u2197</a>` : ""}
         <div class="detail-meta">
           <div class="dm"><div class="k">Method</div><div class="v">${c.method}</div></div>
           <div class="dm"><div class="k">Sample & scope</div><div class="v">${c.sample}</div></div>
@@ -120,6 +121,7 @@
         ${starRows}
       </div>
     </section>
+    ${c.outcome ? `<section class="section outcome" style="padding-top:0;"><div class="wrap"><div class="eyebrow" style="margin-bottom:22px;">Outcome</div><h2 class="outcome-h">${c.outcome.title}</h2><div class="outcome-body">${c.outcome.paras.map(t => `<p>${t}</p>`).join("")}${c.outcome.storyUrl ? `<p><a class="live-link" href="${c.outcome.storyUrl}" target="_blank" rel="noopener">${c.outcome.storyText} \u2197</a></p>` : `<p>${c.outcome.storyText}</p>`}</div></div></section>` : ""}
 
     ${conceptsBlock}
 
